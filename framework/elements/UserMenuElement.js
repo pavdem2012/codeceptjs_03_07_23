@@ -5,7 +5,7 @@ module.exports = {
         userNameMenu: '.username',
         dropDownContent:'.dropdown-content',
         modalWinBody:'body',
-        closeBtn: 'footer.card-footer button.base-button',
+        closeBtn: 'button[data-v-896d50a9][class="base-button base-button--type-button button is-outlined"]',
         langDropMenu: ':nth-child(9) > .is-flex > .select > select',
         submitSettingsBtn: 'button.base-button.is-primary',
         modalWinTitle:'.card-header-title',
@@ -37,11 +37,11 @@ module.exports = {
 
     },
     closeSettings(){
-        I.pressKey('{esc}')
+        I.pressKey('Escape')
     },
 
     closeAbout(){
-        I.click(this.elements.closeBtn,'Закрыть')
+        I.click(this.elements.closeBtn)
     },
     setSettings(value){
         I.selectOption(this.elements.langDropMenu,value)
