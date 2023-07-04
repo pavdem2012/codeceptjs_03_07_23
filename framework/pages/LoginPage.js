@@ -33,10 +33,6 @@ module.exports = {
         I.click(this.submitButton);
     },
 
-    async getPasswordError() {
-        return await I.grabTextFrom(this.errors);
-    },
-
     login({username, password}) {
         //this.visit()
         this.fillUsername(username);

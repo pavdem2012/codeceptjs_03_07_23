@@ -1,6 +1,6 @@
 ///<reference types='codeceptjs' />
 const config = require('../framework/config/config.js');
-const expect = require('chai').expect;
+
 
 Feature('Авторизация');
 
