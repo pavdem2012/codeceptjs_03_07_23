@@ -10,15 +10,9 @@ module.exports = {
     submitButton: locate('button').withText('Войти'),
     errors: '.help',
 
-
     visit(pageUrl) {
         I.amOnPage(pageUrl);
         I.see('Войти')
-    },
-
-    getLoginSession() {
-        this.visit();
-        this.login(this.fields.user);
     },
 
     fillUsername(username) {

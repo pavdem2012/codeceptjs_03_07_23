@@ -6,8 +6,8 @@ module.exports = {
         dropDownContent:'.dropdown-content',
         modalWinBody:'body',
         closeBtn: 'footer.card-footer button.base-button',
-        langDropMenu: ':nth-child(10) > .is-flex > .select > select',
-        submitSettingsBtn: '[data-cy="saveGeneralSettings"]',
+        langDropMenu: ':nth-child(9) > .is-flex > .select > select',
+        submitSettingsBtn: 'button.base-button.is-primary',
         modalWinTitle:'.card-header-title',
         headerH3:'div.content > h3[data-v-e103502e=""]',
         headerH4: '.p-4'
@@ -17,6 +17,9 @@ module.exports = {
     },
     clickItemByIndex(index) {
         this.getUserMenu();
+        I.grabTextFrom("span[data-v-23ee639f]").then(text => {
+            index = text;
+        });
         const itemSelector = locate(this.elements.dropDownContent).find('span').at(index);
         I.seeElement(itemSelector);
         I.click(itemSelector);
@@ -30,6 +33,7 @@ module.exports = {
     },
     getUserMenu(){
         I.click(this.elements.userNameMenu)
+
 
     },
     closeSettings(){
