@@ -1,4 +1,4 @@
-const { inject, locate } = require('codeceptjs');
+const {I} = inject();
 
 const Elements = {
     menuList: '.menu-list',
@@ -12,13 +12,19 @@ const MainMenuElements = {
     },
 
     setItemByName(name) {
-        const I = inject();
+        //const I = inject();
         I.click(locate(Elements.menuList).find('a').withText(name));
     },
 
-    getActiveItem() {
-        return locate(Elements.activeMenuItem);
-    },
+    // getActiveItem() {
+    //     return this.getRoot()
+    //         .find(Elements.activeMenuItem)
+    //         .then((element) => {
+    //             const text = element.text().trim();
+    //             return text;
+    //         });
+    // },
+
 
     getExpectedHeaderText(index) {
         const expectedTexts = [

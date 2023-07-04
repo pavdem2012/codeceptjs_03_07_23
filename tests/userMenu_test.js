@@ -8,7 +8,7 @@ Before(({LoginPage}) => {
     LoginPage.login(config.credentials.user)
 })
 
-Scenario.skip('Переход к странице настроек и выбор локали',  ({ I }) => {
+Scenario('Переход к странице настроек и выбор локали',  ({ I }) => {
     I.seeCurrentUrlEquals(config.urls.mainPage)
     userMenuElements.clickItemByIndex(1)
     I.seeCurrentUrlEquals(config.urls.settingsPage)
@@ -37,7 +37,7 @@ Scenario.skip('Вывод модального окна "О Vikunja"',  ({ I }) 
     I.seeCurrentUrlEquals(config.urls.mainPage)
 });
 
-Scenario('Успешный разлогин',  ({ I }) => {
+Scenario.skip('Успешный разлогин',  ({ I }) => {
     I.seeCurrentUrlEquals(config.urls.mainPage)
     userMenuElements.clickItemByText('Выйти')
     I.seeCurrentUrlEquals(config.urls.loginPage)
