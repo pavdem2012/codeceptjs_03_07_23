@@ -8,7 +8,7 @@ module.exports = {
     },
     loginPageErrors:{
         usernameErr:'Введите имя пользователя',
-        passwordErr:'Введите пароль'
+        passwordErr:'Введите пароль.'
     },
     urls:{
         mainPage: 'https://try.vikunja.io/',
