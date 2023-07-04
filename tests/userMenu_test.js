@@ -17,7 +17,7 @@ Scenario('Переход к странице настроек и выбор ло
 
 });
 
-Scenario.skip('Вывод модального окна "Сочетания клавиш"',  ({ I }) => {
+Scenario('Вывод модального окна "Сочетания клавиш"',  ({ I }) => {
     I.seeCurrentUrlEquals(config.urls.mainPage)
     userMenuElements.clickItemByText('Сочетания клавиш')
     I.seeCurrentUrlEquals(config.urls.mainPage)
@@ -26,7 +26,7 @@ Scenario.skip('Вывод модального окна "Сочетания кл
     I.seeCurrentUrlEquals(config.urls.mainPage)
 });
 
-Scenario.skip('Вывод модального окна "О Vikunja"',  ({ I }) => {
+Scenario('Вывод модального окна "О Vikunja"',  ({ I }) => {
     I.seeCurrentUrlEquals(config.urls.mainPage)
     userMenuElements.clickItemByText('О Vikunja')
     I.seeCurrentUrlEquals(config.urls.aboutPage)
@@ -37,7 +37,7 @@ Scenario.skip('Вывод модального окна "О Vikunja"',  ({ I }) 
     I.seeCurrentUrlEquals(config.urls.mainPage)
 });
 
-Scenario.skip('Успешный разлогин',  ({ I }) => {
+Scenario('Успешный разлогин',  ({ I }) => {
     I.seeCurrentUrlEquals(config.urls.mainPage)
     userMenuElements.clickItemByText('Выйти')
     I.seeCurrentUrlEquals(config.urls.loginPage)

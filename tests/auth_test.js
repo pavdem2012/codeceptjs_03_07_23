@@ -10,13 +10,13 @@ Before(({LoginPage}) => {
 
 
 
-Scenario.skip('Успешная  авторизация',async  ({ I,LoginPage }) => {
+Scenario('Успешная  авторизация',async  ({ I,LoginPage }) => {
     await LoginPage.login(config.credentials.user)
     I.dontSeeCurrentUrlEquals(config.urls.loginPage)
     I.seeCurrentUrlEquals(config.urls.mainPage)
 });
 
-Scenario.skip('Нельзя авторизоваться без пароля',async  ({ I,LoginPage }) => {
+Scenario('Нельзя авторизоваться без пароля',async  ({ I,LoginPage }) => {
     await LoginPage.fillUsername(config.credentials.user.username)
     await LoginPage.submitForm()
     I.dontSeeCurrentUrlEquals(config.urls.mainPage)
@@ -24,7 +24,7 @@ Scenario.skip('Нельзя авторизоваться без пароля',as
     I.see(config.loginPageErrors.passwordErr)
 });
 
-Scenario.skip('Нельзя авторизоваться без имени пользователя',async  ({ I,LoginPage }) => {
+Scenario('Нельзя авторизоваться без имени пользователя',async  ({ I,LoginPage }) => {
     await LoginPage.fillPassword(config.credentials.user.password)
     await LoginPage.submitForm()
     I.dontSeeCurrentUrlEquals(config.urls.mainPage)
