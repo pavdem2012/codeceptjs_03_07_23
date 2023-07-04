@@ -24,9 +24,10 @@ Scenario('Нельзя авторизоваться без пароля',async  
     I.see(config.loginPageErrors.passwordErr)
 });
 
-Scenario.skip('Успешная  авторизация',async  ({ I,LoginPage }) => {
-    //pause()
-    await LoginPage.login(config.credentials.user)
-    //pause()
-    I.dontSeeCurrentUrlEquals(config.urls.loginPage)
+Scenario('Нельзя авторизоваться без имени пользователя',async  ({ I,LoginPage }) => {
+    await LoginPage.fillPassword(config.credentials.user.password)
+    await LoginPage.submitForm()
+    I.dontSeeCurrentUrlEquals(config.urls.mainPage)
+    I.seeCurrentUrlEquals(config.urls.loginPage)
+    I.see(config.loginPageErrors.usernameErr)
 });

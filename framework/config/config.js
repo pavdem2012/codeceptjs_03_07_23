@@ -7,7 +7,7 @@ module.exports = {
         }
     },
     loginPageErrors:{
-        usernameErr:'Введите имя пользователя',
+        usernameErr:'Введите имя пользователя.',
         passwordErr:'Введите пароль.'
     },
     urls:{
