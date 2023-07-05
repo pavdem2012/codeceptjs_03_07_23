@@ -1,45 +1,33 @@
-const { I } = inject();
+const {I} = inject();
 
 module.exports = {
     fields: {
-        username:'#username',
-        password:'#password'
+        user: {
+            username: '#username',
+            password: '#password'
+        }
     },
     submitButton: locate('button').withText('Войти'),
-    errors: {
-        password: '.password-field +p'
-    },
-
+    errors: '.help',
 
     visit(pageUrl) {
         I.amOnPage(pageUrl);
         I.see('Войти')
     },
 
-    getLoginSession() {
-        this.visit();
-        this.login(config.credentials.user);
-    },
-
     fillUsername(username) {
-        I.fillField(this.fields.username, username);
+        I.fillField(this.fields.user.username, username);
     },
 
     fillPassword(password) {
-        I.fillField(this.fields.password, password);
+        I.fillField(this.fields.user.password, password);
     },
 
     submitForm() {
         I.click(this.submitButton);
     },
 
-    getPasswordError() {
-        const errorText = I.grabTextFrom(Elements.errorText);
-        return errorText;
-    },
-
-    login({ username, password }) {
-        //this.visit()
+    login({username, password}) {
         this.fillUsername(username);
         this.fillPassword(password);
         this.submitForm();

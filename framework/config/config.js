@@ -7,8 +7,8 @@ module.exports = {
         }
     },
     loginPageErrors:{
-        usernameErr:'Введите имя пользователя',
-        passwordErr:'Введите пароль'
+        usernameErr:'Введите имя пользователя.',
+        passwordErr:'Введите пароль.'
     },
     urls:{
         mainPage: 'https://try.vikunja.io/',
@@ -32,11 +32,11 @@ module.exports = {
         teamsPageTitle:'Команды | Vikunja',
     },
     mainMenuItems:{
-        reviewItem: 'Обзор',
-        upcomingChallengesItem: 'Предстоящие задачи',
-        projectsItem: 'Проекты',
-        labelsItem: 'Метки',
-        teamsItem: 'Команды'
+        reviewItem: ' Обзор',
+        upcomingChallengesItem: ' Предстоящие задачи',
+        projectsItem: ' Проекты',
+        labelsItem: ' Метки',
+        teamsItem: ' Команды'
     },
     userMenuTitles:{
         basicSettingsItem: 'Основные настройки',

@@ -25,7 +25,7 @@ exports.config = {
     config:'./framework/config/config.js',
     LoginPage: "./framework/pages/LoginPage.js",
     mainMenuElements: "./framework/pages/MainMenuElements.js",
-    userMenuElements:"./framework/pages/UserMenuElements.js\""
+    userMenuElements:"./framework/pages/UserMenuElements.js"
   },
   name: 'codeceptjs_03_07_23'
 }
