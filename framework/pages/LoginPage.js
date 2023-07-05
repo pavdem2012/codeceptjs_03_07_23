@@ -28,7 +28,6 @@ module.exports = {
     },
 
     login({username, password}) {
-        //this.visit()
         this.fillUsername(username);
         this.fillPassword(password);
         this.submitForm();
